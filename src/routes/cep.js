@@ -9,7 +9,6 @@ router.get('/', (req, res)=>{
     const { cep } = req.body
 
     correios.consultaCEP({cep}).then(result =>{
-        console.log(result)
         return res.json(result)
     }).catch(error =>{
         return res.json(error)
